@@ -1,0 +1,23 @@
+<div ng-controller="portfolioController">
+  <div class="jumbotron text-center">
+  	<h1>{{title}}</h1>
+
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search Ticker" ng-model="query">
+      <span class="input-group-addon"  ng-click="searchClick()">Search</span>
+    </div>
+  </div>
+
+  <table ng-repeat="a in [0,1,2,3,4,5]">
+    <tr>
+      <td>{{stockArray[a].dataset_code}}</td>
+    </tr>
+    <tr>
+      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{stockArray[a].column_names[i]}}</td>
+    </tr>
+    <tr ng-repeat="j in [0]">
+      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{stockArray[a].data[j][i]}}</td>
+    </tr>
+  </table>
+
+</div>

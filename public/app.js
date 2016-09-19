@@ -18,6 +18,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
           controller: 'singleController'
         })
 
+        .state('portfolio', {
+          url: '/portfolio',
+          templateUrl: 'components/portfolio/portfolio.html',
+          controller: 'portfolioController'
+        })
+
         .state('about', {
           url: '/about',
           templateUrl: 'components/about/about.html',
