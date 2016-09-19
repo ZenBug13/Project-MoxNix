@@ -1,1 +1,19 @@
-body { padding-top:30px; }
+td {padding: 20px 20px 20px 20px;}
+
+.mar-top--30{margin-top: -30px;}
+.mar-top-5{margin-top: 5px;}
+.mar-top-10{margin-top: 10px;}
+.mar-top-20{margin-top: 20px;}
+.mar-top-30{margin-top: 30px;}
+.mar-top-40{margin-top: 40px;}
+.mar-top-50{margin-top: 50px;}
+.mar-bot-5{margin-bottom: 5px;}
+.mar-bot-10{margin-bottom: 10px;}
+.mar-bot-20{margin-bottom: 20px;}
+.mar-bot-30{margin-bottom: 30px;}
+.mar-bot-40{margin-bottom: 40px;}
+.mar-bot-50{margin-bottom: 50px;}
+.mar-left-20{margin-left: 20px;}
+.mar-left-50{margin-left: 50px;}
+.mar-right-20{margin-right: 20px;}
+.mar-right-50{margin-right: 50px;}
