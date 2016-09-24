@@ -8,15 +8,15 @@
     </div>
   </div>
 
-  <table class="table" ng-repeat="a in [0,1,2,3,4,5]">
+  <table class="table" ng-repeat="a in stockArray">
     <thead>
-      <th>{{stockArray[a].dataset_code}}</th>
+      <th>{{a.dataset_code}}</th>
     </thead>
     <tr>
-      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{stockArray[a].column_names[i]}}</td>
+      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{a.column_names[i]}}</td>
     </tr>
     <tr ng-repeat="j in [0]">
-      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{stockArray[a].data[j][i]}}</td>
+      <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{a.data[j][i]}}</td>
     </tr>
   </table>
 

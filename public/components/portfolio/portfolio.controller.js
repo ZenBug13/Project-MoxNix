@@ -4,12 +4,22 @@ myApp.controller('portfolioController', function($scope, $http) {
 
 	$scope.query = "";
 
-	$scope.stockPortfolio = ["rad","amzn"];
+	$scope.stockPortfolio = [];
+	$scope.arrayPortCounter = 0;
 	$scope.stockArray = [];
-	$scope.arrayCounter = 0;
+	$scope.arrayStockCounter = 0;
+
+	$scope.getTimes=function(){
+     return new Array($scope.arrayStockCounter);
+	 };
 
 	$scope.searchClick = function(){
 		fetchPortfolio($scope.stockPortfolio);
+	}
+
+	$scope.addStock = function(){
+		$scope.stockPortfolio[$scope.arrayPortCounter++] = $scope.query;
+		console.log($scope.stockPortfolio);
 	}
 
 	function fetchPortfolio(sp){
@@ -17,7 +27,7 @@ myApp.controller('portfolioController', function($scope, $http) {
 		  $http.get("https://www.quandl.com/api/v3/datasets/WIKI/"+ sp[i] +".json?api_key=yVH-NKSna23zoz6byWy3")
 			  .then(function(response){
 					console.log(response.data.dataset);
-					$scope.stockArray[$scope.arrayCounter++] = response.data.dataset;
+					$scope.stockArray[$scope.arrayStockCounter++] = response.data.dataset;
 			});
 		}
 	}
