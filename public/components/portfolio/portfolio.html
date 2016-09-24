@@ -3,15 +3,38 @@
   	<h1>{{title}}</h1>
 
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search Ticker" ng-model="query">
       <span class="input-group-addon"  ng-click="searchClick()">Search</span>
     </div>
   </div>
 
-  <table ng-repeat="a in [0,1,2,3,4,5]">
-    <tr>
-      <td>{{stockArray[a].dataset_code}}</td>
-    </tr>
+  <!-- Large modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        ...
+      </div>
+    </div>
+  </div>
+
+  <!-- Small modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        ...
+      </div>
+    </div>
+  </div>
+
+  <table class="table" ng-repeat="a in [0,1,2,3,4,5]">
+    <thead class="thead-default">
+      <tr>
+        <th><h4>{{stockArray[a].dataset_code}} - </h4></th>
+      </tr>
+    </thead>
     <tr>
       <td ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11,12]">{{stockArray[a].column_names[i]}}</td>
     </tr>
