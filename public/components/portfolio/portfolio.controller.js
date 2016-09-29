@@ -4,6 +4,8 @@ myApp.controller('portfolioController', function($scope, $http) {
 
 	$scope.query = "";
 
+	$scope.isStockAdded = false;
+
 	$scope.stockPortfolio = [];
 	$scope.arrayPortCounter = 0;
 	$scope.stockArray = [];
@@ -19,6 +21,7 @@ myApp.controller('portfolioController', function($scope, $http) {
 
 	$scope.addStock = function(){
 		$scope.stockPortfolio[$scope.arrayPortCounter++] = $scope.query;
+		$scope.isStockAdded = true;
 		console.log($scope.stockPortfolio);
 	}
 
